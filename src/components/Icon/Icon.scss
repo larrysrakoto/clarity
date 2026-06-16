@@ -1,0 +1,25 @@
+.Icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+
+  &.mask {
+    background-color: currentColor;
+    mask-image: var(--icon-src);
+    -webkit-mask-image: var(--icon-src);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+  }
+
+  &.bg {
+    background-image: var(--icon-src);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* brand */
+  --color-primary: #0a2876;
+  --color-primary-hover: #081f5e;
+  --color-link: #1e6cf5;
+  --color-link-hover: #1357d6;
+
+  /* surfaces */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f7f8fa;
+  --color-bg-input: #ffffff;
+
+  /* text */
+  --color-text: #15192a;
+  --color-text-muted: #6b7280;
+  --color-text-soft: #9ca3af;
+
+  /* borders */
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
+
+  /* dark panel */
+  --color-panel-from: #0e2b78;
+  --color-panel-to: #060d36;
+  --color-panel-text: #ffffff;
+  --color-panel-text-muted: rgba(255, 255, 255, 0.7);
+  --color-panel-card-bg: rgba(255, 255, 255, 0.06);
+  --color-panel-card-border: rgba(255, 255, 255, 0.12);
+  --color-panel-card-icon-bg: rgba(94, 130, 240, 0.25);
+
+  /* radii */
+  --radius-sm: 0.375em;
+  --radius-md: 0.5em;
+  --radius-lg: 0.75em;
+  --radius-xl: 1em;
+
+  /* shadows */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-geist-sans), Inter, system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

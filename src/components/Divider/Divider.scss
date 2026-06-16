@@ -1,0 +1,26 @@
+.Divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-border);
+  }
+
+  &:not(.with-label)::after {
+    display: none;
+  }
+
+  .label {
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-text-soft);
+    text-transform: uppercase;
+  }
+}
